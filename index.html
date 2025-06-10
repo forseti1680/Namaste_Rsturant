@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dahab Adventures - Premium Camping & Desert Experiences</title>
+  <link rel="stylesheet" href="style.css">
+<!-- Google Fonts for Arabic -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="#home" class="logo" data-en="🏕️ Dahab Adventures" data-ar="🏕️ مغامرات دهب">🏕️ Dahab Adventures</a>
+      <ul class="nav-links">
+        <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
+        <li><a href="#camps" data-en="Camps" data-ar="المخيمات">Camps</a></li>
+        <li><a href="#activities" data-en="Activities" data-ar="الأنشطة">Activities</a></li>
+        <li><a href="#booking" data-en="Book Now" data-ar="احجز الآن">Book Now</a></li>
+        <li><a href="#reviews" data-en="Reviews" data-ar="التقييمات">Reviews</a></li>
+        <li><a href="#contact" data-en="Contact" data-ar="التواصل">Contact</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button id="langToggle" title="Language">🌐 EN</button>
+        <button id="darkToggle" title="Dark Mode">🌓</button>
+                        <button id="theme-toggle" class="theme-toggle" title="تبديل الوضع">🌙</button>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="home">
+    <div class="hero-content">
+      <h1 data-en="Discover Dahab's Magic" data-ar="اكتشف سحر دهب">Discover Dahab's Magic</h1>
+      <p data-en="Premium camping experiences in Egypt's most beautiful desert & coastal locations" data-ar="تجارب تخييم متميزة في أجمل مواقع الصحراء والساحل في مصر">Premium camping experiences in Egypt's most beautiful desert & coastal locations</p>
+      <a href="#booking" class="btn-primary" data-en="Book Your Adventure" data-ar="احجز مغامرتك">Book Your Adventure</a>
+    </div>
+  </header>
+
+  <!-- Camps Section -->
+  <section id="camps" class="section container">
+    <h2 data-en="Premium Camping Experiences" data-ar="تجارب تخييم متميزة">Premium Camping Experiences</h2>
+    <div class="filters">
+      <button onclick="filterCamps('all')" class="active" data-en="All Camps" data-ar="جميع المخيمات">All Camps</button>
+      <button onclick="filterCamps('beach')" data-en="Beach" data-ar="الشاطئ">Beach</button>
+      <button onclick="filterCamps('desert')" data-en="Desert" data-ar="الصحراء">Desert</button>
+      <button onclick="filterCamps('luxury')" data-en="Luxury" data-ar="فاخر">Luxury</button>
+      <button onclick="filterCamps('family')" data-en="Family" data-ar="عائلي">Family</button>
+    </div>
+    <div class="camp-grid">
+      <div class="camp-card beach luxury">
+        <div class="price-tag" data-en="From 750 EGP" data-ar="من 750 جنيه">From 750 EGP</div>
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Blue Horizon Camp" />
+        <div class="camp-info">
+          <h3 data-en="Blue Horizon Luxury" data-ar="الأفق الأزرق الفاخر">Blue Horizon Luxury</h3>
+          <p data-en="Premium beachfront camping with ocean views and luxury amenities" data-ar="تخييم فاخر على الشاطئ مع إطلالة على المحيط ووسائل راحة فاخرة">Premium beachfront camping with ocean views and luxury amenities</p>
+          <div class="features">
+            <span class="feature-tag" data-en="🌊 Ocean View" data-ar="🌊 إطلالة بحرية">🌊 Ocean View</span>
+            <span class="feature-tag" data-en="🏖️ Private Beach" data-ar="🏖️ شاطئ خاص">🏖️ Private Beach</span>
+            <span class="feature-tag" data-en="🍽️ Meals Included" data-ar="🍽️ وجبات مشمولة">🍽️ Meals Included</span>
+          </div>
+          <div class="rating">
+            <span class="stars">⭐⭐⭐⭐⭐</span>
+            <span data-en="(4.9/5 - 127 reviews)" data-ar="(4.9/5 - 127 تقييم)">(4.9/5 - 127 reviews)</span>
+          </div>
+          <button class="book-now" onclick="selectCamp('Blue Horizon Luxury', 750)" data-en="Book via WhatsApp" data-ar="احجز عبر واتساب">Book via WhatsApp</button>
+        </div>
+      </div>
+
+      <div class="camp-card desert">
+        <div class="price-tag" data-en="From 650 EGP" data-ar="من 650 جنيه">From 650 EGP</div>
+        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80" alt="Desert Star Camp" />
+        <div class="camp-info">
+          <h3 data-en="Desert Star Experience" data-ar="تجربة نجم الصحراء">Desert Star Experience</h3>
+          <p data-en="Sleep under million stars in the peaceful Sinai desert" data-ar="نم تحت مليون نجمة في صحراء سيناء الهادئة">Sleep under million stars in the peaceful Sinai desert</p>
+          <div class="features">
+            <span class="feature-tag" data-en="🌟 Stargazing" data-ar="🌟 مراقبة النجوم">🌟 Stargazing</span>
+            <span class="feature-tag" data-en="🔥 Campfire" data-ar="🔥 نار المخيم">🔥 Campfire</span>
+            <span class="feature-tag" data-en="🐪 Camel Rides" data-ar="🐪 ركوب الجمال">🐪 Camel Rides</span>
+          </div>
+          <div class="rating">
+            <span class="stars">⭐⭐⭐⭐⭐</span>
+            <span data-en="(4.8/5 - 89 reviews)" data-ar="(4.8/5 - 89 تقييم)">(4.8/5 - 89 reviews)</span>
+          </div>
+          <button class="book-now" onclick="selectCamp('Desert Star Experience', 650)" data-en="Book via WhatsApp" data-ar="احجز عبر واتساب">Book via WhatsApp</button>
+        </div>
+      </div>
+
+      <div class="camp-card beach family">
+        <div class="price-tag" data-en="From 500 EGP" data-ar="من 500 جنيه">From 500 EGP</div>
+        <img src="https://images.unsplash.com/photo-1504851149312-7a075b496cc7?auto=format&fit=crop&w=800&q=80" alt="Family Beach Camp" />
+        <div class="camp-info">
+          <h3 data-en="Family Beach Paradise" data-ar="جنة الشاطئ العائلية">Family Beach Paradise</h3>
+          <p data-en="Perfect for families with kids - safe, fun, and memorable" data-ar="مثالي للعائلات مع الأطفال - آمن وممتع ولا يُنسى">Perfect for families with kids - safe, fun, and memorable</p>
+          <div class="features">
+            <span class="feature-tag" data-en="👨‍👩‍👧‍👦 Kid-Friendly" data-ar="👨‍👩‍👧‍👦 مناسب للأطفال">👨‍👩‍👧‍👦 Kid-Friendly</span>
+            <span class="feature-tag" data-en="🏊 Shallow Water" data-ar="🏊 مياه ضحلة">🏊 Shallow Water</span>
+            <span class="feature-tag" data-en="🎯 Activities" data-ar="🎯 أنشطة">🎯 Activities</span>
+          </div>
+          <div class="rating">
+            <span class="stars">⭐⭐⭐⭐⭐</span>
+            <span data-en="(4.7/5 - 156 reviews)" data-ar="(4.7/5 - 156 تقييم)">(4.7/5 - 156 reviews)</span>
+          </div>
+          <button class="book-now" onclick="selectCamp('Family Beach Paradise', 500)" data-en="Book via WhatsApp" data-ar="احجز عبر واتساب">Book via WhatsApp</button>
+        </div>
+      </div>
+
+      <div class="camp-card desert luxury">
+        <div class="price-tag" data-en="From 900 EGP" data-ar="من 900 جنيه">From 900 EGP</div>
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80" alt="Royal Desert Camp" />
+        <div class="camp-info">
+          <h3 data-en="Royal Desert Retreat" data-ar="ملاذ الصحراء الملكي">Royal Desert Retreat</h3>
+          <p data-en="Ultimate luxury desert experience with premium service" data-ar="تجربة صحراوية فاخرة نهائية مع خدمة متميزة">Ultimate luxury desert experience with premium service</p>
+          <div class="features">
+            <span class="feature-tag" data-en="👑 VIP Service" data-ar="👑 خدمة كبار الشخصيات">👑 VIP Service</span>
+            <span class="feature-tag" data-en="🍾 Premium Dining" data-ar="🍾 طعام فاخر">🍾 Premium Dining</span>
+            <span class="feature-tag" data-en="🛀 Hot Shower" data-ar="🛀 دش ساخن">🛀 Hot Shower</span>
+          </div>
+          <div class="rating">
+            <span class="stars">⭐⭐⭐⭐⭐</span>
+            <span data-en="(5.0/5 - 45 reviews)" data-ar="(5.0/5 - 45 تقييم)">(5.0/5 - 45 reviews)</span>
+          </div>
+          <button class="book-now" onclick="selectCamp('Royal Desert Retreat', 900)" data-en="Book via WhatsApp" data-ar="احجز عبر واتساب">Book via WhatsApp</button>
+        </div>
+      </div>
+
+      <div class="camp-card beach">
+        <div class="price-tag" data-en="From 400 EGP" data-ar="من 400 جنيه">From 400 EGP</div>
+        <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=800&q=80" alt="Backpacker Beach" />
+        <div class="camp-info">
+          <h3 data-en="Backpacker's Haven" data-ar="ملاذ الرحالة">Backpacker's Haven</h3>
+          <p data-en="Budget-friendly beachside camping for solo travelers" data-ar="تخييم اقتصادي على الشاطئ للمسافرين المنفردين">Budget-friendly beachside camping for solo travelers</p>
+          <div class="features">
+            <span class="feature-tag" data-en="💰 Budget" data-ar="💰 اقتصادي">💰 Budget</span>
+            <span class="feature-tag" data-en="🤝 Social" data-ar="🤝 اجتماعي">🤝 Social</span>
+            <span class="feature-tag" data-en="🏄 Water Sports" data-ar="🏄 رياضات مائية">🏄 Water Sports</span>
+          </div>
+          <div class="rating">
+            <span class="stars">⭐⭐⭐⭐</span>
+            <span data-en="(4.4/5 - 203 reviews)" data-ar="(4.4/5 - 203 تقييم)">(4.4/5 - 203 reviews)</span>
+          </div>
+          <button class="book-now" onclick="selectCamp('Backpacker Haven', 400)" data-en="Book via WhatsApp" data-ar="احجز عبر واتساب">Book via WhatsApp</button>
+        </div>
+      </div>
+
+      <div class="camp-card desert family">
+        <div class="price-tag" data-en="From 550 EGP" data-ar="من 550 جنيه">From 550 EGP</div>
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80" alt="Adventure Base Camp" />
+        <div class="camp-info">
+          <h3 data-en="Adventure Base Camp" data-ar="مخيم قاعدة المغامرة">Adventure Base Camp</h3>
+          <p data-en="Perfect base for exploring desert adventures and hiking" data-ar="قاعدة مثالية لاستكشاف مغامرات الصحراء والمشي لمسافات طويلة">Perfect base for exploring desert adventures and hiking</p>
+          <div class="features">
+            <span class="feature-tag" data-en="🥾 Hiking" data-ar="🥾 المشي لمسافات طويلة">🥾 Hiking</span>
+            <span class="feature-tag" data-en="🧗 Rock Climbing" data-ar="🧗 تسلق الصخور">🧗 Rock Climbing</span>
+            <span class="feature-tag" data-en="📍 Central Location" data-ar="📍 موقع مركزي">📍 Central Location</span>
+          </div>
+          <div class="rating">
+            <span class="stars">⭐⭐⭐⭐</span>
+            <span data-en="(4.6/5 - 78 reviews)" data-ar="(4.6/5 - 78 تقييم)">(4.6/5 - 78 reviews)</span>
+          </div>
+          <button class="book-now" onclick="selectCamp('Adventure Base Camp', 550)" data-en="Book via WhatsApp" data-ar="احجز عبر واتساب">Book via WhatsApp</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Activities Section -->
+  <section id="activities" class="section container">
+    <h2 data-en="Adventure Activities" data-ar="أنشطة المغامرة">Adventure Activities</h2>
+    <div class="activities-grid">
+      <div class="activity-card">
+        <div class="activity-icon">🤿</div>
+        <h3 data-en="Blue Hole Diving" data-ar="غوص الحفرة الزرقاء">Blue Hole Diving</h3>
+        <p><strong data-en="750 EGP without lunch" data-ar="750 جنيه بدون غداء">750 EGP without lunch</strong></p>
+        <p><strong data-en="950 EGP with lunch" data-ar="950 جنيه مع الغداء">950 EGP with lunch</strong></p>
+        <p data-en="World's most famous diving spot" data-ar="أشهر موقع غوص في العالم">World's most famous diving spot</p>
+      </div>
+      <div class="activity-card">
+        <div class="activity-icon">🏊</div>
+        <h3 data-en="Three Pools Safari" data-ar="رحلة الثلاث برك">Three Pools Safari</h3>
+        <p><strong data-en="650 EGP Single" data-ar="650 جنيه فردي">650 EGP Single</strong></p>
+        <p><strong data-en="300 EGP Double" data-ar="300 جنيه مزدوج">300 EGP Double</strong></p>
+        <p data-en="Natural swimming pools adventure" data-ar="مغامرة برك السباحة الطبيعية">Natural swimming pools adventure</p>
+      </div>
+      <div class="activity-card">
+        <div class="activity-icon">⛵</div>
+        <h3 data-en="Yacht Experience" data-ar="تجربة اليخت">Yacht Experience</h3>
+        <p><strong data-en="990 EGP Morning" data-ar="990 جنيه صباحي">990 EGP Morning</strong></p>
+        <p><strong data-en="850 EGP Evening" data-ar="850 جنيه مسائي">850 EGP Evening</strong></p>
+        <p data-en="Luxury sailing on Red Sea" data-ar="إبحار فاخر في البحر الأحمر">Luxury sailing on Red Sea</p>
+      </div>
+      <div class="activity-card">
+        <div class="activity-icon">🏔️</div>
+        <h3 data-en="Wadi Star Adventure" data-ar="مغامرة وادي النجوم">Wadi Star Adventure</h3>
+        <p><strong data-en="250 EGP per person" data-ar="250 جنيه للشخص">250 EGP per person</strong></p>
+        <p data-en="Explore hidden desert valleys" data-ar="استكشف أودية الصحراء المخفية">Explore hidden desert valleys</p>
+      </div>
+      <div class="activity-card">
+        <div class="activity-icon">🚤</div>
+        <h3 data-en="Submarine Tour" data-ar="جولة الغواصة">Submarine Tour</h3>
+        <p><strong data-en="800 EGP per person" data-ar="800 جنيه للشخص">800 EGP per person</strong></p>
+        <p data-en="Underwater Red Sea exploration" data-ar="استكشاف البحر الأحمر تحت الماء">Underwater Red Sea exploration</p>
+      </div>
+      <div class="activity-card">
+        <div class="activity-icon">🦋</div>
+        <h3 data-en="Shawash & Ras Shetan" data-ar="شواش ورأس شيطان">Shawash & Ras Shetan</h3>
+        <p><strong data-en="850 EGP without lunch" data-ar="850 جنيه بدون غداء">850 EGP without lunch</strong></p>
+        <p><strong data-en="950 EGP with lunch" data-ar="950 جنيه مع الغداء">950 EGP with lunch</strong></p>
+        <p data-en="Hidden beach paradise" data-ar="جنة الشاطئ المخفية">Hidden beach paradise</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section id="booking" class="booking-section">
+    <div class="container">
+      <h2 data-en="Book Your Adventure" data-ar="احجز مغامرتك">Book Your Adventure</h2>
+      <div class="booking-form">
+        <div class="form-group">
+          <label data-en="Selected Package" data-ar="الحزمة المختارة">Selected Package</label>
+          <input type="text" id="selectedCamp" readonly data-en="Select a camp above" data-ar="اختر مخيماً أعلاه" placeholder="Select a camp above">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label data-en="Check-in Date" data-ar="تاريخ الوصول">Check-in Date</label>
+            <input type="date" id="checkinDate" min="">
+          </div>
+          <div class="form-group">
+            <label data-en="Check-out Date" data-ar="تاريخ المغادرة">Check-out Date</label>
+            <input type="date" id="checkoutDate" min="">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label data-en="Guests" data-ar="الضيوف">Guests</label>
+            <select id="guestCount">
+              <option value="1" data-en="1 Guest" data-ar="ضيف واحد">1 Guest</option>
+              <option value="2" data-en="2 Guests" data-ar="ضيفان">2 Guests</option>
+              <option value="3" data-en="3 Guests" data-ar="3 ضيوف">3 Guests</option>
+              <option value="4" data-en="4 Guests" data-ar="4 ضيوف">4 Guests</option>
+              <option value="5+" data-en="5+ Guests" data-ar="5+ ضيوف">5+ Guests</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label data-en="Experience Level" data-ar="مستوى الخبرة">Experience Level</label>
+            <select id="experienceLevel">
+              <option value="beginner" data-en="Beginner" data-ar="مبتدئ">Beginner</option>
+              <option value="intermediate" data-en="Intermediate" data-ar="متوسط">Intermediate</option>
+              <option value="advanced" data-en="Advanced" data-ar="متقدم">Advanced</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label data-en="Additional Activities" data-ar="أنشطة إضافية">Additional Activities</label>
+          <select id="activities" multiple>
+            <option value="diving" data-en="Blue Hole Diving (+750 EGP)" data-ar="غوص الحفرة الزرقاء (+750 جنيه)">Blue Hole Diving (+750 EGP)</option>
+            <option value="yacht" data-en="Yacht Experience (+990 EGP)" data-ar="تجربة اليخت (+990 جنيه)">Yacht Experience (+990 EGP)</option>
+            <option value="safari" data-en="Three Pools Safari (+650 EGP)" data-ar="رحلة الثلاث برك (+650 جنيه)">Three Pools Safari (+650 EGP)</option>
+            <option value="submarine" data-en="Submarine Tour (+800 EGP)" data-ar="جولة الغواصة (+800 جنيه)">Submarine Tour (+800 EGP)</option>
+          </select>
+        </div>
+        <button class="book-now" onclick="processBooking()" data-en="Complete Booking via WhatsApp" data-ar="أكمل الحجز عبر واتساب">Complete Booking via WhatsApp</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section id="reviews" class="section container">
+    <h2 data-en="What Our Guests Say" data-ar="ماذا يقول ضيوفنا">What Our Guests Say</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="rating">
+          <span class="stars">⭐⭐⭐⭐⭐</span>
+        </div>
+        <p data-en="Amazing experience! The Blue Horizon camp exceeded all expectations. The sunset views were breathtaking and the staff was incredibly friendly. Will definitely return!" data-ar="تجربة مذهلة! تجاوز مخيم الأفق الأزرق كل التوقعات. كانت مناظر غروب الشمس خلابة والموظفون ودودون للغاية. سأعود بالتأكيد!">Amazing experience! The Blue Horizon camp exceeded all expectations. The sunset views were breathtaking and the staff was incredibly friendly. Will definitely return!</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">M</div>
+          <div>
+            <strong data-en="Mohamed Ahmed" data-ar="محمد أحمد">Mohamed Ahmed</strong><br>
+            <small data-en="Cairo, Egypt" data-ar="القاهرة، مصر">Cairo, Egypt</small>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="rating">
+          <span class="stars">⭐⭐⭐⭐⭐</span>
+        </div>
+        <p data-en="Perfect family trip! Our kids loved the beach camp and all the activities. Safe, clean, and so much fun. The camel ride was the highlight!" data-ar="رحلة عائلية مثالية! أحب أطفالنا مخيم الشاطئ وجميع الأنشطة. آمن ونظيف وممتع جداً. كانت جولة الجمل هي الأبرز!">Perfect family trip! Our kids loved the beach camp and all the activities. Safe, clean, and so much fun. The camel ride was the highlight!</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">S</div>
+          <div>
+            <strong data-en="Sarah Johnson" data-ar="سارة جونسون">Sarah Johnson</strong><br>
+            <small data-en="London, UK" data-ar="لندن، المملكة المتحدة">London, UK</small>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="rating">
+          <span class="stars">⭐⭐⭐⭐⭐</span>
+        </div>
+        <p data-en="The desert camping was magical! Sleeping under the stars and waking up to the sunrise over the mountains - unforgettable experience." data-ar="كان التخييم في الصحراء سحرياً! النوم تحت النجوم والاستيقاظ على شروق الشمس فوق الجبال - تجربة لا تُنسى.">The desert camping was magical! Sleeping under the stars and waking up to the sunrise over the mountains - unforgettable experience.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">A</div>
+          <div>
+            <strong data-en="Ahmed Hassan" data-ar="أحمد حسن">Ahmed Hassan</strong><br>
+            <small data-en="Alexandria, Egypt" data-ar="الإسكندرية، مصر">Alexandria, Egypt</small>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="rating">
+          <span class="stars">⭐⭐⭐⭐</span>
+        </div>
+        <p data-en="Great value for money! The Blue Hole diving was incredible. Professional guides and excellent equipment. Highly recommended for adventure lovers!" data-ar="قيمة ممتازة مقابل المال! كان غوص الحفرة الزرقاء لا يصدق. مرشدون محترفون ومعدات ممتازة. موصى به بشدة لمحبي المغامرة!">Great value for money! The Blue Hole diving was incredible. Professional guides and excellent equipment. Highly recommended for adventure lovers!</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">L</div>
+          <div>
+            <strong data-en="Lisa Martinez" data-ar="ليزا مارتينيز">Lisa Martinez</strong><br>
+            <small data-en="Barcelona, Spain" data-ar="برشلونة، إسبانيا">Barcelona, Spain</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Points Section -->
+  <section id="points" class="section container">
+    <div class="points-box">
+      <h2 data-en="Your Adventure Rewards" data-ar="مكافآت مغامرتك">Your Adventure Rewards</h2>
+      <p data-en="Track your bookings and earn exclusive rewards!" data-ar="تتبع حجوزاتك واكسب مكافآت حصرية!">Track your bookings and earn exclusive rewards!</p>
+      <div class="points-display">
+        <div class="points-item">
+          <span class="points-number" id="campsBooked">0</span>
+          <small data-en="Camps Booked" data-ar="مخيمات محجوزة">Camps Booked</small>
+        </div>
+        <div class="points-item">
+          <span class="points-number" id="userPoints">0</span>
+          <small data-en="Reward Points" data-ar="نقاط المكافآت">Reward Points</small>
+        </div>
+        <div class="points-item">
+          <span class="points-number" id="nextReward">100</span>
+          <small data-en="Next Reward" data-ar="المكافأة التالية">Next Reward</small>
+        </div>
+      </div>
+      <p><small data-en="🏆 Earn 10 points per booking • 🎁 100 points = 10% discount • 🌟 500 points = Free activity" data-ar="🏆 اكسب 10 نقاط لكل حجز • 🎁 100 نقطة = خصم 10% • 🌟 500 نقطة = نشاط مجاني">🏆 Earn 10 points per booking • 🎁 100 points = 10% discount • 🌟 500 points = Free activity</small></p>
+    </div>
+  </section>
+
+ <!-- Contact Section -->
+<section id="contact" class="section container">
+  <h2 data-en="Contact Our Expert Team" data-ar="اتصل بفريق الخبراء لدينا">Contact Our Expert Team</h2>
+  <p data-en="Available 24/7 to help plan your perfect Dahab adventure" data-ar="متاح على مدار الساعة طوال أيام الأسبوع لمساعدتك في التخطيط لمغامرتك المثالية في دهب">
+    Available 24/7 to help plan your perfect Dahab adventure
+  </p>
+  <br>
+  <div class="whatsapp-container">
+    <a href="https://wa.me/201001234567?text=Hello,%20I%20want%20to%20book%20a%20camping%20experience%20in%20Dahab!" 
+       target="_blank" 
+       class="btn-whatsapp" 
+       data-en="📱 Chat with us on WhatsApp" 
+       data-ar="📱 تحدث معنا على واتساب">
+      📱 Chat with us on WhatsApp
+    </a>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 data-en="Dahab Adventures" data-ar="مغامرات دهب">Dahab Adventures</h3>
+          <p data-en="Premium camping and adventure experiences in Egypt's most beautiful locations. Award-winning service since 2015." data-ar="تجارب تخييم ومغامرة متميزة في أجمل مواقع مصر. خدمة حائزة على جوائز منذ 2015.">Premium camping and adventure experiences in Egypt's most beautiful locations. Award-winning service since 2015.</p>
+        </div>
+        <div class="footer-section">
+          <h3 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h3>
+          <p><a href="#camps" data-en="Our Camps" data-ar="مخيماتنا">Our Camps</a></p>
+          <p><a href="#activities" data-en="Activities" data-ar="الأنشطة">Activities</a></p>
+          <p><a href="#booking" data-en="Book Now" data-ar="احجز الآن">Book Now</a></p>
+          <p><a href="#reviews" data-en="Reviews" data-ar="التقييمات">Reviews</a></p>
+        </div>
+        <div class="footer-section">
+          <h3 data-en="Contact Info" data-ar="معلومات الاتصال">Contact Info</h3>
+          <p data-en="📍 Dahab, South Sinai, Egypt" data-ar="📍 دهب، جنوب سيناء، مصر">📍 Dahab, South Sinai, Egypt</p>
+          <p data-en="📱 WhatsApp: +20 100 123 4567" data-ar="📱 واتساب: +20 100 123 4567">📱 WhatsApp: +20 100 123 4567</p>
+          <p data-en="✉️ info@dahabadventures.com" data-ar="✉️ info@dahabadventures.com">✉️ info@dahabadventures.com</p>
+          <p data-en="🌐 www.dahabadventures.com" data-ar="🌐 www.dahabadventures.com">🌐 www.dahabadventures.com</p>
+        </div>
+      </div>
+      <hr style="border-color: rgba(255,255,255,0.2); margin: 2rem 0 1rem;">
+      <p data-en="© 2025 Dahab Adventures. All rights reserved. | Award Winner 2015 🏆" data-ar="© 2025 مغامرات دهب. جميع الحقوق محفوظة. | الفائز بالجائزة 2015 🏆">© 2025 Dahab Adventures. All rights reserved. | Award Winner 2015 🏆</p>
+    </div>
+  </footer>
+
+  <!-- Booking Confirmation Modal -->
+  <div id="bookingModal" class="modal">
+    <div class="modal-content">
+      <h3 data-en="🎉 Booking Confirmed!" data-ar="🎉 تم تأكيد الحجز!">🎉 Booking Confirmed!</h3>
+      <p data-en="You've earned 10 reward points!" data-ar="لقد كسبت 10 نقاط مكافآت!">You've earned <strong>10 reward points</strong>!</p>
+      <p data-en="Opening WhatsApp to complete your reservation..." data-ar="جاري فتح واتساب لإكمال حجزك...">Opening WhatsApp to complete your reservation...</p>
+      <button class="close-modal" onclick="closeModal()" data-en="Close" data-ar="إغلاق">Close</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
